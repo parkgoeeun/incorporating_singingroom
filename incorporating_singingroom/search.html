@@ -1,0 +1,294 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko"  xml:lang="ko">
+<head>
+  <meta http-equiv="Content-Type" Content="text/html; charset=utf-8"/>
+  <title>param2.html</title>
+</head>
+<body>
+  <script>
+  var Request = function()
+  {
+    this.getParameter = function( name )
+    {
+      var rtnval = '';
+      var nowAddress = unescape(encodeURIComponent(location.href));
+      var parameters = (nowAddress.slice(nowAddress.indexOf('?')+1,nowAddress.length)).split('&');
+      for(var i = 0 ; i < parameters.length ; i++)
+      {
+        var varName = parameters[i].split('=')[0];
+
+        if(varName.toUpperCase() == name.toUpperCase())
+        {
+          rtnval = parameters[i].split('=')[1];
+          break;
+        }
+      }
+      //return rtnval;
+
+      var rtnval_ = decodeURIComponent(rtnval.replace(/\+/gi, ' '));
+      var rtnval_nospace = decodeURIComponent(rtnval.replace(/\+/gi, ''));
+
+      document.write(decodeURIComponent(rtnval_) + "(으)로 검색 하셨습니다." +"<br>");
+
+      text = "<songbook><book>" +
+
+      "<co>금영</co>" +"<number>76084</number>" +"<title>1 To 10</title>" +"<singer>TWICE</singer>" +
+      "<co>금영</co>" +"<number>49353</number>" +"<title>11:11</title>" +"<singer>태연(소녀시대)</singer>" +
+      "<co>금영</co>" +"<number>76085</number>" +"<title>가을엔</title>" +"<singer>크루셜스타</singer>" +
+      "<co>금영</co>" +"<number>76101</number>" +"<title>가을의 밤</title>" +"<singer>다비치</singer>" +
+      "<co>금영</co>" +"<number>76077</number>" +"<title>그래 그래</title>" + "<singer>김나영</singer>" +
+      "<co>금영</co>" +"<number>76078</number>" +"<title>긴 생머리</title>" +"<singer>Crybaby</singer>" +
+      "<co>금영</co>" +"<number>76102</number>" +"<title>널 너무 사랑해서</title>" +"<singer>MC몽</singer>" +
+      "<co>금영</co>" +"<number>49349</number>" +"<title>다음 역</title>" + "<singer>앤씨아</singer>" +
+      "<co>금영</co>" +"<number>76090</number>" +"<title>무심한 달력</title>" +"<singer>조영구</singer>" +
+      "<co>금영</co>" +"<number>76086</number>" +"<title>바보야</title>" +"<singer>김종국</singer>" +
+      "<co>금영</co>" +"<number>76089</number>" +"<title>반지</title>" +"<singer>볼빨간 사춘기</singer>" +
+      "<co>금영</co>" +"<number>49350</number>" +"<title>불장난</title>" +"<singer>BLACKPINK</singer>" +
+      "<co>금영</co>" +"<number>76103</number>" +"<title>사랑입니다</title>" +"<singer>Bro</singer>"+
+      "<co>금영</co>" +"<number>76096</number>" +"<title>사랑하기 좋은 날</title>" +"<singer>최진희</singer>" +
+      "<co>금영</co>" +"<number>76091</number>" +"<title>서로의 조각</title>" + "<singer>프롬</singer>" +
+      "<co>금영</co>" +"<number>76079</number>" +"<title>야!</title>" +"<singer>산들(B1A4)></singer>" +
+      "<co>금영</co>" +"<number>76100</number>" +"<title>원하는 대로</title>" + "<singer>포스트맨</singer>" +
+      "<co>금영</co>" +"<number>76092</number>" +"<title>인생이란</title>" + "<singer>윤시내</singer>" +
+      "<co>금영</co>" +"<number>76093</number>" +"<title>초콜릿</title>" + "<singer>볼빨간 사춘기</singer>" +
+      "<co>금영</co>" +"<number>76104</number>" +"<title>투명 우산 (Don't Let..</title>" + "<singer>샤이니</singer>" +
+      "<co>금영</co>" +"<number>76094</number>" +"<title>향수 (Nostalgia)</title>" + "<singer>Crush</singer>" +
+      "<co>금영</co>" +"<number>76097</number>" +"<title>휘파람 (Acoustic Ver..</title>" + "<singer>BLACKPINK</singer>" +
+      "<co>금영</co>" +"<number>76095</number>" +"<title>All I Wanna Do(K)(Fe..</title>" + "<singer>박재범</singer>" +
+      "<co>금영</co>" +"<number>76080</number>" +"<title>Bye, Autumn</title>" + "<singer>솔튼페이퍼</singer>"+
+      "<co>금영</co>" +"<number>76081</number>" +"<title>Destiny</title>" + "<singer>전병욱</singer>" +
+      "<co>금영</co>" +"<number>49351</number>" +"<title>Hey Mama!</title>" + "<singer>EXO-CBX(첸백시)</singer>" +
+      "<co>금영</co>" +"<number>49348</number>" +"<title>If U Love Me (Feat.동..</title>" + "<singer>어쿠루브</singer>" +
+      "<co>금영</co>" +"<number>76082</number>" +"<title>Li-La (리라)</title>" + "<singer>박효신</singer>" +
+      "<co>금영</co>" +"<number>49352</number>" +"<title>Make It Rain</title>" + "<singer>블락비 바스타즈</singer>" +
+      "<co>금영</co>" +"<number>76088</number>" +"<title>One In A Million</title>" + "<singer>TWICE</singer>" +
+      "<co>금영</co>" +"<number>76105</number>" +"<title>Pingpong</title>" + "<singer>아이오아이(I.O.I)</singer>" +
+      "<co>금영</co>" +"<number>76098</number>" +"<title>Ring Ring (Feat.개코..</title>" + "<singer>Sik-K</singer>" +
+      "<co>금영</co>" +"<number>76106</number>" +"<title>Stay</title>" + "<singer>BLACKPINK</singer>" +
+      "<co>금영</co>" +"<number>76107</number>" +"<title>The Closer</title>" + "<singer>VIXX</singer>" +
+      "<co>금영</co>" +"<number>76099</number>" +"<title>The One</title>" + "<singer>EXO-CBX(첸백시)</singer>" +
+      "<co>금영</co>" +"<number>76083</number>" +"<title>The Rain</title>" + "<singer>레이디스코드</singer>" +
+      "<co>금영</co>" +"<number>49292</number>" +"<title>그대라는 사치</title>" +"<singer>한동근</singer>" +
+      "<co>금영</co>" +"<number>78191</number>" +"<title> 이 소설의 끝을 다시 ..</title>" +"<singer>한동근</singer>" +
+      "<co>금영</co>" +"<number>49082</number>" +"<title>어디에도</title>" +"<singer>M.C THE MAX</singer>" +
+      "<co>금영</co>" +"<number>49293</number>" +"<title>우주를 줄게</title>" +"<singer>볼빨간 사춘기</singer>" +
+      "<co>금영</co>" +"<number>9431</number>"  +"<title>소주 한잔</title>" +"<singer>임창정</singer>" +
+      "<co>금영</co>" +"<number>8818</number>"  +"<title>너였다면</title>" +"<singer>정승환</singer>" +
+      "<co>금영</co>" +"<number>87102</number>" +"<title>안아 줘</title>" +"<singer>정준일</singer>"+
+      "<co>금영</co>" +"<number>69033</number>" +"<title> 가시</title>" +"<singer>버즈</singer>" +
+      "<co>금영</co>" +"<number>49201</number>" +"<title>널 사랑하지 않아</title>" +"<singer>어반자카파</singer>" +
+      "<co>금영</co>" +"<number>88176</number>" +"<title>스토커</title>" +"<singer>10cm</singer>" +
+      "<co>금영</co>" +"<number>78535</number>" +"<title>걱정 말아요 그대</title>" +"<singer>이적</singer>"+
+      "<co>금영</co>" +"<number>48960</number>" +"<title>또다시 사랑</title>" +"<singer>임창정</singer>" +
+      "<co>금영</co>" +"<number>45117</number>" +"<title>응급실</title>" +"<singer>izi</singer>" +
+      "<co>금영</co>" +"<number>78888</number>" +"<title>Forever</title>" +"<singer>비와이</singer>" +
+      "<co>금영</co>" +"<number>6286</number>"  +"<title> ears</title>" +"<singer>소찬휘</singer>"+
+      "<co>금영</co>" +"<number>49321</number>" +"<title>숨</title>" +"<singer>박효신</singer>" +
+      "<co>금영</co>"+"<number>85068</number>"  +"<title>남자를 몰라</title>" +"<singer>버즈</singer>" +
+      "<co>금영</co>"+"<number>59272</number>"  +"<title>야생화</title>" +"<singer>박효신</singer>" +
+      "<co>금영</co>"+"<number>63269</number>"  +"<title>체념</title>" +"<singer>BIG MAMA</singer>" +
+      "<co>금영</co>"+"<number>59054</number>"  +"<title>듣는 편지</title>" +"<singer>40</singer>" +
+      "<co>금영</co>"+"<number>5830</number>"   +"<title>이미 슬픈 사랑</title>" +"<singer>야다</singer>" +
+      "<co>금영</co>"+"<number>78657</number>"  +"<title>한숨</title>" +"<singer>이하이</singer>" +
+      "<co>금영</co>"+"<number>46280</number>"  +"<title>고칠게</title>" +"<singer>진원</singer>" +
+      "<co>금영</co>"+"<number>63853</number>"  +"<title>친구라도 될 걸 그랬어..</title>" +"<singer>거미</singer>" +
+      "<co>금영</co>"+"<number>68590</number>"  +"<title>눈의 꽃</title>" +"<singer>박효신</singer>" +
+      "<co>금영</co>"+"<number>62858</number>"  +"<title>보고싶다</title>" +"<singer>김범수</singer>" +
+      "<co>금영</co>"+"<number>45046</number>"  +"<title>행복하지 말아요</title>" +"<singer>M.C THE MAX</singer>" +
+      "<co>금영</co>"+"<number>46868</number>"  +"<title>술 한잔해요</title>" +"<singer>지아</singer>" +
+      "<co>금영</co>"+"<number>77526</number>"  +"<title>지우개</title>" +"<singer>알리</singer>"+
+      "<co>금영</co>"+"<number>6348</number>"   +"<title>너를 위해</title>" +"<singer>임재범</singer>"+
+      "<co>금영</co>"+"<number>49112</number>"  +"<title>공감 (Feat.서영은)</title>" +"<singer>정준영</singer>"+
+      "<co>금영</co>"+"<number>45195</number>"  +"<title>인연(동녘바람)</title>" +"<singer>이선희</singer>"+
+      "<co>금영</co>"+"<number>87706</number>"  +"<title>안동역에서</title>" +"<singer>진성</singer>"+
+      "<co>금영</co>"+"<number>45387</number>"  +"<title>애인 있어요</title>"+"<singer>이은미</singer>"+
+      "<co>금영</co>"+"<number>45151</number>"  +"<title>겁쟁이</title>" +"<singer>버즈</singer>"+
+      "<co>금영</co>"+"<number>3890</number>"   +"<title>가질 수 없는 너</title>"+"<singer>BANK</singer>"+
+      "<co>금영</co>"+"<number>62836</number>"  +"<title>One Love</title>" +"<singer>M.C THE MAX</singer>" +
+      "<co>금영</co>"+"<number>77581</number>"  +"<title>신촌을 못 가</title>" +"<singer>포스트맨</singer>" +
+      "<co>금영</co>"+"<number>47499</number>"  +"<title>Hello</title>" +"<singer>허각</singer>" +
+      "<co>금영</co>"+"<number>47552</number>"  +"<title>서쪽 하늘</title>" +"<singer>울랄라세션</singer>" +
+      "<co>금영</co>"+"<number>64428</number>"  +"<title>나였으면</title>" +"<singer>나윤권</singer>" +
+      "<co>금영</co>"+"<number>46956</number>"  +"<title>미워요</title>" +"<singer>정인</singer>" +
+      "<co>금영</co>"+"<number>49267</number>"  +"<title>Puzzle</title>" +"<singer>씨잼,비와이</singer>" +
+      "<co>금영</co>"+"<number>47870</number>"  +"<title>바람 기억</title>" +"<singer>나얼</singer>" +
+      "<co>금영</co>"+"<number>6048</number>"   +"<title>천년의 사랑</title>" +"<singer>박완규</singer>"+
+      "<co>금영</co>"+"<number>78247</number>"  +"<title>잠시만 안녕</title>" +"<singer>M.C THE MAX</singer>" +
+      "<co>금영</co>"+"<number>49332</number>"  +"<title>너무너무너무</title>" +"<singer>아이오아이(I.O.I)</singer>" +
+      "<co>금영</co>"+"<number>76012</number>"  +"<title>러시안룰렛</title>" +"<singer>레드벨벳</singer>" +
+      "<co>금영</co>"+"<number>49242</number>"  +"<title>네 생각</title>" +"<singer>존박</singer>"+
+      "<co>태진</co>"+"<number>48139</number>"+"<title>나만알고싶다</title>"+"<singer>소란</singer>"+
+      "<co>태진</co>"+"<number>48134</number>"+"<title>한잔의눈물</title>"+"<singer>진미령</singer>"+
+      "<co>태진</co>"+"<number>48154</number>"+"<title>널너무사랑해서</title>"+"<singer>MC몽(Feat.정은지)</singer>"+
+      "<co>태진</co>"+"<number>48153</number>"+"<title>11:11</title>"+"<singer>태연</singer>"+
+      "<co>태진</co>"+"<number>48138</number>"+"<title>Flat Shoes</title>"+"<singer>크루셜스타(Feat.러비)</singer>" +
+      "<co>태진</co>"+"<number>48137</number>"+"<title>지워져도괜찮아(웹툰'우리헤어졌어요'OST)</title>"+"<singer>오혜금</singer>"+
+      "<co>태진</co>"+"<number>48136</number>"+"<title>만나서반가워요(트니트니율동동요)</title>"+"<singer>트니트니 </singer>"+
+      "<co>태진</co>"+"<number>48135</number>"+"<title>바보야(우리집에사는남자OST)</title>"+"<singer>김종국 </singer>"+
+      "<co>태진</co>"+"<number>48149</number>"+"<title>The One </title>"+"<singer>EXO-CBX </singer>"+
+      "<co>태진</co>"+"<number>48148</number>"+"<title>STAY </title>"+"<singer>블랙핑크 </singer>"+
+      "<co>태진</co>"+"<number>48147</number>"+"<title>불장난 </title>"+"<singer>블랙핑크 </singer>"+
+      "<co>태진</co>"+"<number>48133</number>"+"<title>오늘</title>"+"<singer> 오왠 </singer>"+
+      "<co>태진</co>"+"<number>48132</number>"+"<title>심장이없어(7월의크리스마스,한여름밤의치맥파티)</title>"+"<singer> 유주(여자친구),The Name</singer>"+
+      "<co>태진</co>"+"<number>48131</number>"+"<title>나와(With Me)(혼술남녀OST)</title>"+"<singer> 바닐라어쿠스틱</singer>"+
+      "<co>태진</co>"+"<number>48130</number>"+"<title>너같은사람없어</title>"+"<singer> 손호영 </singer>"+
+      "<co>태진</co>"+"<number>48143</number>"+"<title>Make It Rain</title>"+"<singer> 블락비바스타즈</singer>"+
+      "<co>태진</co>"+"<number>48142</number>"+"<title>The Closer</title>"+"<singer> 빅스 </singer>"+
+      "<co>태진</co>"+"<number>48141</number>"+"<title>Hey Mama!</title>"+"<singer> EXO-CBX </singer>"+
+      "<co>태진</co>"+"<number>48129</number>"+"<title>받는사랑이주는사랑에게</title>"+"<singer> 다비치</singer>"+
+      "<co>태진</co>"+"<number>48128</number>"+"<title>미인</title>"+"<singer> 자이언트핑크(Feat.김세황,도끼)(Prod. By 도끼)</singer>"+
+      "<co>태진</co>"+"<number>48127</number>"+"<title>If U Love Me</title>"+"<singer> 어쿠루브(Feat.동경)</singer>"+
+      "<co>태진</co>"+"<number>48124</number>"+"<title>BonnieClyde</title>"+"<singer> 딘 </singer>"+
+      "<co>태진</co>"+"<number>48123</number>"+"<title>벌써일년(이도끼가네도끼냐,일편단심해바라기)</title>"+"<singer>챈슬러,솔라(마마무)</singer>"+
+      "<co>태진</co>"+"<number>48122</number>"+"<title>Drive</title>"+"<singer>박재범(Feat.그레이)</singer>"+
+      "<co>태진</co>"+"<number>46920</number>"+"<title> 내가저지른사랑 </title>"+"<singer>임창정</singer>"+
+      "<co>태진</co>"+"<number>46716</number>"+"<title> 이소설의끝을다시써보려해 </title>"+"<singer>한동근 </singer>"+
+      "<co>태진</co>"+"<number>47835 </number>"+"<title>그대라는사치</title>"+"<singer> 한동근 </singer>"+
+      "<co>태진</co>"+"<number>46009 </number>"+"<title>어디에도 </title>"+"<singer>MC THE MAX</singer>"+
+      "<co>태진</co>"+"<number>46478</number>"+"<title> 널사랑하지않아 </title>"+"<singer>어반자카파</singer>"+
+      "<co>태진</co>"+"<number>11491 </number>"+"<title>소주한잔 </title>"+"<singer>임창정 </singer>"+
+      "<co>태진</co>"+"<number>34687</number>"+"<title> 안아줘 </title>"+"<singer>정준일 </singer>"+
+      "<co>태진</co>"+"<number>14684 </number>"+"<title>가시 </title>"+"<singer>버즈 </singer>"+
+      "<co>태진</co>"+"<number>46490</number>"+"<title> 너였다면(또오해영OST) </title>"+"<singer>정승환</singer>"+
+      "<co>태진</co>"+"<number>45372 </number>"+"<title>또다시사랑</title>"+"<singer> 임창정</singer>"+
+      "<co>태진</co>"+"<number> 14515</number>"+"<title> 응급실(쾌걸춘향OST)</title>"+"<singer> izi </singer>"+
+      "<co>태진</co>"+"<number>39361</number>"+"<title> 스토커</title>"+"<singer> 10cm </singer>"+
+      "<co>태진</co>"+"<number>45592</number>"+"<title> 걱정말아요그대(응답하라1988 OST) </title>"+"<singer>이적 </singer>"+
+      "<co>태진</co>"+"<number>46637</number>"+"<title> Forever </title>"+"<singer>비와이(Prod. By 그레이) </singer>"+
+      "<co>태진</co>"+"<number>46875</number>"+"<title> 우주를줄게</title>"+"<singer> 볼빨간사춘기</singer>"+
+      "<co>태진</co>"+"<number>46165</number>"+"<title> 한숨 </title>"+"<singer>이하이 </singer>"+
+      "<co>태진</co>"+"<number>11019</number>"+"<title> 체념</title>"+"<singer> 빅마마 </singer>"+
+      "<co>태진</co>"+"<number>38263</number>"+"<title> 야생화 </title>"+"<singer>박효신 </singer>"+
+      "<co>태진</co>"+"<number>14260</number>"+"<title> 행복하지말아요</title>"+"<singer> MC THE MAX </singer>"+
+      "<co>태진</co>"+"<number>11238</number>"+"<title>친구라도될걸그랬어</title>"+"<singer> 거미 </singer>"+
+      "<co>태진</co>"+"<number>8797</number>"+"<title> Tears </title>"+"<singer>소찬휘 </singer>"+
+      "<co>태진</co>"+"<number>37824 </number>"+"<title>듣는편지 </title>"+"<singer>40 </singer>"+
+      "<co>태진</co>"+"<number>8122</number>"+"<title> 이미슬픈사랑 </title>"+"<singer>야다 </singer>"+
+      "<co>태진</co>"+"<number>2730 </number>"+"<title>가질수없는너 </title>"+"<singer>뱅크 </singer>"+
+      "<co>태진</co>"+"<number>15978 </number>"+"<title>남자를몰라</title>"+"<singer> 버즈 </singer>"+
+      "<co>태진</co>"+"<number>11095</number>"+"<title> 보고싶다</title>"+"<singer> 김범수 </singer>"+
+      "<co>태진</co>"+"<number>36390</number>"+"<title> 지우개</title>"+"<singer> 알리 </singer>"+
+      "<co>태진</co>"+"<number>46118 </number>"+"<title>공감 </title>"+"<singer>정준영(Feat.서영은) </singer>"+
+      "<co>태진</co>"+"<number>14238</number>"+"<title> 눈의꽃(미안하다사랑한다OST) </title>"+"<singer>박효신 </singer>"+
+      "<co>태진</co>"+"<number>8890 </number>"+"<title>너를위해</title>"+"<singer> 임재범 </singer>"+
+      "<co>태진</co>"+"<number>46337</number>"+"<title> Cheer Up </title>"+"<singer>트와이스 </singer>"+
+      "<co>태진</co>"+"<number>14814</number>"+"<title> 인연(동녘바람) </title>"+"<singer>이선희 </singer>"+
+      "<co>태진</co>"+"<number>46698</number>"+"<title> 냉탕에상어 </title>"+"<singer>슈퍼비(Feat.블랙넛) </singer>"+
+      "<co>태진</co>"+"<number>36370 </number>"+"<title>신촌을못가</title>"+"<singer> 포스트맨</singer>"+
+      "<co>태진</co>"+"<number> 32340</number>"+"<title> 미워요 </title>"+"<singer>정인 </singer>"+
+      "<co>태진</co>"+"<number>37031</number>"+"<title> 오늘은가지마</title>"+"<singer> 임세준</singer>"+
+      "<co>태진</co>"+"<number>35884 </number>"+"<title>바람기억</title>"+"<singer> 나얼 </singer>"+
+      "<co>태진</co>"+"<number>46732</number>"+"<title> Lazenca, Save Us(우리동네음악대장) </title>"+"<singer>하현우</singer>"+
+      "<co>태진</co>"+"<number> 46670</number>"+"<title> 너그리고나(NAVILLERA) </title>"+"<singer>여자친구 </singer>"+
+      "<co>태진</co>"+"<number>15435</number>"+"<title> 애인있어요 </title>"+"<singer>이은미 </singer>"+
+      "<co>태진</co>"+"<number>14657</number>"+"<title> 겁쟁이 </title>"+"<singer>버즈 </singer>"+
+      "<co>태진</co>"+"<number>34409</number>"+"<title> Hello </title>"+"<singer>허각 </singer>"+
+      "<co>태진</co>"+"<number>46928 </number>"+"<title>러시안룰렛(Russian Roulette)</title>"+"<singer> 레드벨벳 </singer>"+
+      "<co>태진</co>"+"<number>35774 </number>"+"<title>All For You(응답하라1997 OST) </title>"+"<singer>서인국,정은지 </singer>"+
+      "<co>태진</co>"+"<number>19520</number>"+"<title> 고칠게(다섯남자와아기천사OST) </title>"+"<singer>진원 </singer>"+
+      "<co>태진</co>"+"<number>10594 </number>"+"<title>One Love </title>"+"<singer>MC THE MAX </singer>"+
+      "<co>태진</co>"+"<number>46252 </number>"+"<title>사랑하자(태양의후예OST) </title>"+"<singer>SG워너비 </singer>"+
+      "<co>태진</co>"+"<number>31981 </number>"+"<title>술한잔해요 </title>"+"<singer>지아 </singer>"+
+      "<co>태진</co>"+"<number>13584 </number>"+"<title>나였으면(황태자의첫사랑OST) </title>"+"<singer>나윤권 </singer>"+
+      "<co>태진</co>"+"<number>46694 </number>"+"<title>네생각 </title>"+"<singer>존박 </singer>"+
+      "<co>태진</co>"+"<number>46769 </number>"+"<title>휘파람 </title>"+"<singer>블랙핑크 </singer>"+
+      "<co>태진</co>"+"<number>46782 </number>"+"<title>Puzzle </title>"+"<singer>씨잼,비와이 </singer>"+
+      "<co>태진</co>"+"<number>46772 </number>"+"<title>사랑해요(함부로애틋하게OST) </title>"+"<singer>김범수 </singer>"+
+      "<co>태진</co>"+"<number>30868</number>"+"<title> 8282 </title>"+"<singer>다비치 </singer>"+
+      "<co>태진</co>"+"<number>8589</number>"+"<title> 너를보내고 </title>"+"<singer>윤도현밴드</singer>"+
+      "<co>태진</co>"+"<number>17468</number>"+"<title> 감사</title>"+"<singer> 김동률 </singer>"+
+      "<co>태진</co>"+"<number>8447</number>"+"<title> 천년의사랑 </title>"+"<singer>박완규 </singer>"+
+      "<co>태진</co>"+"<number>46402</number>"+"<title> 꿈처럼(또오해영OST)</title>"+"<singer> 벤(Ben) </singer>"+
+      "<co>태진</co>"+"<number>3134 </number>"+"<title>취중진담</title>"+"<singer> 전람회 </singer>"+
+      "<co>태진</co>"+"<number>34595</number>"+"<title> 서쪽하늘 </title>"+"<singer>울랄라세션 </singer>"+
+      "<co>태진</co>"+"<number>36062</number>"+"<title> 만약에말야</title>"+"<singer> 노을(전우성 Solo) </singer>"+
+      "<co>태진</co>"+"<number>31588</number>"+"<title> 사랑비</title>"+"<singer> 김태우 </singer>"+
+      "<co>태진</co>"+"<number>34257 </number>"+"<title>기다릴게(공주의남자OST) </title>"+"<singer>하동균,이정 </singer>"+
+      "<co>태진</co>"+"<number>38541</number>"+"<title> 눈, 코, 입 </title>"+"<singer>태양 </singer>"+
+      "<co>태진</co>"+"<number>31729</number>"+"<title> 죽일놈(Guilty) </title>"+"<singer>다이나믹듀오 </singer>"+
+      "<co>태진</co>"+"<number>48026</number>"+"<title> 숨 </title>"+"<singer>박효신 </singer>"+
+      "<co>태진</co>"+"<number>38226 </number>"+"<title>흔한노래 </title>"+"<singer>임창정 </singer>"+
+      "<co>태진</co>"+"<number>46639</number>"+"<title> 호랑나비 </title>"+"<singer>보이비(Feat.길,리듬파워) </singer>"+
+      "<co>태진</co>"+"<number>45676 </number>"+"<title>소녀(응답하라1988 OST) </title>"+"<singer>오혁</singer>"+
+      "<co>태진</co>"+"<number>8937</number>"+"<title> 중독된사랑 </title>"+"<singer>조장혁 </singer>"+
+      "<co>태진</co>"+"<number>46302</number>"+"<title> 돌아오지마 </title>"+"<singer>헤이즈(Feat.용준형) </singer>"+
+      "<co>태진</co>"+"<number>16677</number>"+"<title> 기다리다</title>"+"<singer>윤하 </singer>"+
+      "<co>태진</co>"+"<number>37924</number>"+"<title> 고백 </title>"+"<singer>정준일 </singer>"+
+      "<co>태진</co>"+"<number>35970</number>"+"<title> 보여줄게</title>"+"<singer> 에일리 </singer>"+
+      "<co>태진</co>"+"<number>29671</number>"+"<title> 겁 </title>"+"<singer>송민호(Feat.태양)</singer>"+
+      "<co>태진</co>"+"<number>35965</number>"+"<title> 먼지가되어 </title>"+"<singer>정준영,로이킴 </singer>"+
+      "<co>태진</co>"+"<number>46764 </number>"+"<title>사랑이아프다(함부로애틋하게OST) </title>"+"<singer>환희 </singer>"+
+      "<co>태진</co>"+"<number>35668</number>"+"<title> 가수가된이유 </title>"+"<singer>신용재 </singer>"+
+      "<co>태진</co>"+"<number>37159</number>"+"<title> 1월부터6월까지 </title>"+"<singer>공일오비(Feat.윤종신) </singer>"+
+      "<co>태진</co>"+"<number>46671</number>"+"<title> Day Day </title>"+"<singer>비와이(Feat.박재범)(Prod. By 그레이) </singer>"+
+      "<co>태진</co>"+"<number>46398 </number>"+"<title>매일매일기다려(우리동네음악대장) </title>"+"<singer>하현우 </singer>"+
+      "<co>태진</co>"+"<number>31308</number>"+"<title> 사랑의배터리</title>"+"<singer>홍진영 </singer>"+
+      "<co>태진</co>"+"<number>19440</number>"+"<title> 바보에게...바보가 </title>"+"<singer>박명수</singer>"+
+      "<co>태진</co>"+"<number>15871 </number>"+"<title>사랑안해 </title>"+"<singer>백지영 </singer>"+
+      "<co>태진</co>"+"<number>37243 </number>"+"<title>가족사진 </title>"+"<singer>김진호</singer>"+
+      "<co>태진</co>"+"<number>46856 </number>"+"<title>너를위해(달의연인-보보경심려OST) </title>"+"<singer>첸,백현,시우민(EXO)</singer>"+
+      "<co>태진</co>"+"<number>9281 </number>"+"<title>Endless </title>"+"<singer>플라워 </singer>"+
+      "<co>태진</co>"+"<number>46307 </number>"+"<title>하늘바라기 </title>"+"<singer>정은지(Feat.하림) </singer>"+
+      "<co>태진</co>"+"<number>29183 </number>"+"<title>그남잔말야(냄새를보는소녀OST)</title>"+"<singer> MC THE MAX </singer>"+
+      "<co>태진</co>"+"<number>46227 </number>"+"<title>D(Half Moon) </title>"+"<singer>딘(Feat.개코)</singer>"+
+      "<co>태진</co>"+"<number>34049</number>"+"<title> 끝사랑 </title>"+"<singer>김범수 </singer>"+
+      "<co>태진</co>"+"<number>30661</number>"+"<title> 사랑..그놈</title>"+"<singer> Bobby Kim </singer>"+
+      "<co>태진</co>"+"<number>37533 </number>"+"<title>이별 10분전 </title>"+"<singer>정준영 </singer>"+
+      "<co>태진</co>"+"<number>35198 </number>"+"<title>나를사랑했던사람아 </title>"+"<singer>허각</singer>"+
+      "<co>태진</co>"+"<number>34548</number>"+"<title> 정류장</title>"+"<singer> 버스커버스커 </singer>"+
+      "<co>태진</co>"+"<number>8941</number>"+"<title> 말리꽃(비천무OST)</title>"+"<singer> 이승철</singer>"+
+      "<co>태진</co>"+"<number>2454</number>"+"<title> 잘못된만남</title>"+"<singer> 김건모 </singer>"+
+      "<co>태진</co>"+"<number>16329 </number>"+"<title>나는나비</title>"+"<singer> 윤도현밴드 </singer>"+
+      "<co>태진</co>"+"<number>3800 </number>"+"<title>발걸음</title>"+"<singer>에메랄드캐슬</singer>"+
+      "<co>태진</co>"+"<number>14503 </number>"+"<title>꽃피는봄이오면 </title>"+"<singer>BMK</singer>"
+
+
+      +"</book></songbook>";
+
+
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(text,"text/xml");
+
+
+      var len = xmlDoc.getElementsByTagName("co");
+
+      for(var i=0; i<len.length; i++){ //금영
+
+        var co = xmlDoc.getElementsByTagName("co")[i].childNodes[0].nodeValue;
+        var number = xmlDoc.getElementsByTagName("number")[i].childNodes[0].nodeValue;
+        var title= xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue;
+        var singer= xmlDoc.getElementsByTagName("singer")[i].childNodes[0].nodeValue;
+
+        var title_nospace = decodeURIComponent(title.replace(/\ /gi, ''));
+        var singer_nospace = decodeURIComponent(singer.replace(/\ /gi, ''));
+
+        if(singer_nospace.indexOf(rtnval_nospace) != -1 || title_nospace.indexOf(rtnval_nospace) != -1){
+          document.write("<br>"+ "<"+ co +">" +"\n");
+          document.write("번호: " + number +"\n");
+          document.write("제목: " + title+"\n");
+          document.write("가수: " + singer+"\n");
+        }
+
+      }
+
+    }
+  }
+  var request = new Request();
+
+
+  </script>
+</head>
+
+<body>
+  <form name='frm'>
+
+    <script>
+
+    request.getParameter('keyWord');
+    request.setCharacterEncoding("euc-kr");
+
+    </script>
+
+  </form>
+</body>
+
+</html>
